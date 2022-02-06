@@ -1,0 +1,603 @@
+/* COMMON STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(/img/red\ and\ black.png);
+    background-position: left;
+    background-size: 65%;
+    background-repeat: repeat;
+}
+
+
+/* HEADER LOGO */
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 35%;
+}
+
+.heading {
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'New Rocker', cursive;
+    margin-right: 5rem;
+}
+
+/* INVISIBLE LINK */
+.invisible-link {
+    font-size: 40rem;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; 
+}
+
+/* MAIN SECTION */
+.post {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5rem 0;
+    padding: 4rem;
+}
+
+.title {
+    color: white;
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 4rem;
+    justify-self: center;
+    text-align: center;
+}
+
+.pic {
+    width: 20%;
+    justify-self: center;
+    padding: 3rem 0;
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 2rem;
+    text-align: center;
+    justify-self: center;
+    width: 80%;
+    line-height: 5rem;
+}
+
+.btn {
+    color: white;
+    justify-self: center;
+    font-size: 3rem;
+}
+
+
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr .5fr;
+    grid-template-areas: 
+    'logo'
+    'icons'
+    'copyright';
+    height: 32vw;
+    background-color: black;
+    border-top: .5rem solid #69100a85;
+}
+
+.foot-logo {
+    grid-area: logo;
+    width: 13%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 8rem;
+}
+
+.icons-group {
+    grid-area: icons; 
+    justify-self: center;
+    margin-top: 2rem;
+    display: inline-flex;
+}
+
+.icon {
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+.icon:hover {
+    color: white;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.808);
+    justify-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: raleway;
+    font-weight: 200;
+    display: block;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.copyright a:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1415px) {
+    /* .heading {
+        color: saddlebrown;
+    } */
+    /* HEADER NAVBAR */
+    .logo {
+        width: 33%;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 35rem;  
+    }
+}
+@media screen and (max-width: 1315px) {
+    /* .heading {
+        color: seagreen;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 70%;
+    }
+    /* HEADER LOGO */
+    .logo {
+        width: 31%;
+    }
+    .heading {
+        font-size: 4.5rem; 
+        margin-right: 3rem;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 32rem;  
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    /* .heading {
+        color: yellow;
+    } */
+    /* HEADER LOGO */
+    .logo {
+        width: 30%;
+    }
+    .heading {
+        font-size: 4rem; 
+        margin-right: 0;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 30rem;  
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 3.5rem;
+    }
+    .pic {
+        width: 22%;  
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* .heading {
+        color: violet;
+    } */
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 27rem;  
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    /* .heading {
+        color: tomato;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 80%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 35%;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 24rem;  
+    }
+    /* FOOTER */
+    .copyright {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    /* .heading {
+        color: blue;
+    } */
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 22rem;  
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 3.2rem;
+    }
+    .pic {
+        width: 25%;  
+    }
+    .btn {
+        font-size: 2.8rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 36vw;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    /* .heading {
+        color: grey;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 3.5rem; 
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 20rem;  
+    }
+}
+
+@media screen and (max-width: 775px) {
+    /* .heading {
+        color: hotpink;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 85%;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 18rem;  
+    }
+    /* FOOTER */
+    .footer {
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    /* .heading {
+        color: deepskyblue;
+    } */
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 16rem;  
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 2.9rem;
+    }
+    .pic {
+        width: 29%;  
+    }
+    .btn {
+        font-size: 2.6rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    /* .heading {
+        color: orange;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 90%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 40%;
+    }
+    .heading {
+        font-size: 3.2rem; 
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 15rem;  
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 2.5rem;
+    }
+    .pic {
+        width: 40%;  
+    }
+    .text {
+        width: 85%;
+    }
+    /* FOOTER */
+    .footer {
+        height: 55vw;
+    }
+    .foot-logo {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    /* .heading {
+        color: palevioletred;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 3rem; 
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 13rem;  
+    }
+     /* MAIN SECTION */
+     .title {
+        font-size: 2.2rem;
+    }
+    .pic {
+        width: 50%;  
+    }
+    .text {
+        width: 85%;
+        font-size: 1.8rem;
+        line-height: 4rem;
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    /* .heading {
+        color: purple;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 95%;
+    }
+    /* HEADER LOGO */
+    .heading {
+        font-size: 2.8rem;
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 11rem;  
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 2rem;
+    }
+    .text {
+        width: 87%;
+    }
+    .btn {
+        font-size: 2.2rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 65vw;
+    }
+     .icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* .heading {
+        color: tan;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 100%; 
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 45%;
+    }
+     /* MAIN SECTION */
+     .title {
+        font-size: 1.8rem;
+    }
+    .pic {
+        width: 60%;  
+    }
+    .text {
+        width: 90%;
+    }
+    .btn {
+        font-size: 2rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 80vw;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    /* .heading {
+        color: greenyellow;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 2.5rem; 
+    }
+     /* MAIN SECTION */
+     .title {
+        font-size: 1.6rem;
+    }
+    .text {
+        width: 95%;
+        line-height: 3.5rem;
+    }
+    .btn {
+        font-size: 1.8rem;
+    }
+     /* FOOTER */
+    .foot-logo {
+        width: 25%;
+    }
+    .copyright {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 305px) {
+    /* .heading {
+        color: red;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 105%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 55%;
+    }
+     /* MAIN SECTION */
+     .title {
+        font-size: 1.5rem;
+    }
+    .text {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1.5rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 85vw;
+    }
+}
+
+@media screen and (max-width: 298px) {
+    /* .heading {
+        color: darkblue;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 2.2rem; 
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 10rem;  
+    }
+    /* FOOTER */
+    .copyright {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 252px) {
+    /* .heading {
+        color: darkolivegreen;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 2rem; 
+    }
+    /* MAIN SECTION */
+    .title {
+        font-size: 1.3rem;
+    }
+    .pic {
+        width: 80%;  
+    }
+    .text {
+        font-size: 1.3rem;
+        line-height: 3rem;
+    }
+    .btn {
+        font-size: 1.3rem; 
+    }
+    /* FOOTER */
+    .footer {
+        height: 97vw;
+    }
+}
+
+@media screen and (max-width: 212px) {
+    /* .heading {
+        color: powderblue;
+    } */
+    /* HEADER LOGO */
+    .heading {
+        font-size: 1.8rem; 
+    }
+    /* INVISIBLE LINK */
+    .invisible-link {
+        font-size: 8rem;  
+    }
+     /* MAIN SECTION */
+    .pic {
+        width: 100%;  
+    }
+    .text {
+        line-height: 2.5rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 135vw;
+    }
+    .foot-logo {
+       width: 35%;
+   }
+   .copyright {
+        font-size: .8rem;
+    } 
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Fowler | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=New+Rocker&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- HEADER LOGO NAV BAR -->
+    <div class="nav" id="header">
+
+        <img class="logo" src="img/Logo-silver-RED.png">
+    
+    <!-- NAVBAR -->
+    <ul class="navbar">
+            <a class="a" href="news.html"><li class="navbar-links" id="change-links" data-text="News">News</li></a>
+            <a class="a" href="about.html"><li class="navbar-links" id="change-links" data-text="About">About</li></a>
+            <a class="a" href="photos.html"><li class="navbar-links" id="change-links" data-text="Photos">Photos</li></a>
+            <a class="a" href="production.html"><li class="navbar-links" id="change-links" data-text="Production">Production</li></a>
+            <a class="a" href="friendsAndGear.html"><li class="navbar-links" id="change-links" data-text="Friends & Gear">Friends & Gear</li></a>
+            <a class="a" href="contact.html"><li class="navbar-links" id="change-links" data-text="Contact">Contact</li></a>
+        </ul>
+    </div>
+
+      
+    
+
+    <!-- HAMBURGER MENU -->
+
+    <div class="mini-nav">
+        
+
+            <div class='hamburger-menu'>
+                <div class='line line-1'></div>
+                <div class='line line-2'></div>
+                <div class='line line-3'></div>
+            </div>
+
+        
+            
+            <nav class='top-nav' >
+                <ul class='mini-nav-list'>
+                    <li>
+                        <a href='news.html' class='mini-nav-link'>News</a>
+                    </li>
+                    <li>
+                        <a href='about.html' class='mini-nav-link'>About</a>
+                    </li>
+                    <li>
+                        <a href='photos.html' class='mini-nav-link'>Photos</a>
+                    </li>
+                    <li>
+                        <a href='production.html' class='mini-nav-link'>Production</a>
+                    </li>
+                    <li>
+                        <a href='friendsAndGear.html' class='mini-nav-link'>Friends & Gear</a>
+                    </li>
+                    <li>
+                        <a href='contact.html' class='mini-nav-link'>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+       
+       
+
+
+    <!-- MAIN -->
+    <section class="section-main">
+        <img class="main-img" src="img/dave RED.png">
+    
+            <div class="short-bio">
+                <p>With over 37 years experience in the industry - including personal artist management, tour management, and playing bass guitar for many multi-platinum artists, Dave's résumé includes Dolly Parton, Billy Bob Thornton, and Lorrie Morgan, just to name a few.</p>
+                <br>
+                <btn onclick="window.location.href='#'" class="short-bio-link">Read More</btn>
+            </div>
+
+        <img class="main-img2" src="img/boots.jpg">
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <img src="img/silver-logo.png" class="foot-logo">
+        <div class="icons-group">
+            <a class="icon" href="https://www.facebook.com/davefowlerbass">
+                <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a class="icon" href="https://www.instagram.com/davefowler1963/" >
+                <i class="fab fa-instagram-square"></i>
+                    </a>
+                    <a class="icon" href="https://twitter.com/davefonbass">
+                <i class="fab fa-twitter-square"></i>
+                    </a>
+                    <a  class="icon" href="https://www.youtube.com/watch?v=WP4huJx314w">
+                <i class="fab fa-youtube-square"></i>
+                    </a>
+                </div>
+        <p class="copyright">Created by <a href="#">VanessaH Web Design</a>
+            <br>Copyright &#169DaveFowler All Rights Reserved</p>    
+    </section>
+
+    <script>
+        //HAMBURGER MENU
+
+document.querySelector('.hamburger-menu').addEventListener('click', () => {
+    document.querySelector('.mini-nav').classList.toggle('change');
+  })
+    </script>
+</body>
+</html>

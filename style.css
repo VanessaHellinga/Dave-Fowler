@@ -1,0 +1,1014 @@
+/* COMMON STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url(/img/red\ and\ black.png);
+    background-position: left;
+    background-size: 65%;
+    background-repeat: repeat;
+}
+
+/* HEADER NAV BAR */
+.nav {
+    height: 30vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'logo'
+    'navbar';
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+    width: 35%;
+}
+
+.navbar {
+    justify-self: center;
+    /* padding: 5rem; */
+    perspective: 500;
+    background-color: black;
+    padding: 5rem 0;
+}  
+
+.navbar-links a, li {
+    grid-area: navbar;
+    color: rgba(255, 255, 255, 0.808);
+    display: inline-flex;
+    margin: 0 3rem;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    font-family: 'New Rocker', cursive;
+    letter-spacing: .3rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transition: transform .7s;
+}
+.a {
+    text-decoration: none;
+}
+
+.navbar-links:hover {
+    transform: rotateX(90deg);
+}
+
+.navbar-links::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: -100%;
+    padding: inherit;
+    color: #69100A;
+    text-shadow: none;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+
+/* HAMBURGER MENU */
+.mini-nav {
+    visibility: hidden;
+    height: 0;
+}
+
+.hamburger-menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.line {
+    width: inherit;
+    height: .5rem;
+    background-color: #901910;
+    border-radius: 12rem;
+    transform-origin: right;
+    transition: transform 1s;
+    z-index: 99;
+}
+
+.line-2 {
+    height: .3rem;
+    z-index: 99;
+}
+
+.change .line-1 {
+    transform: rotateZ(-45deg);
+    z-index: 99;
+}
+
+.change .line-2 {
+    transform: translate(5px, 20px);
+    z-index: 99;
+}
+
+.change .line-3 {
+    transform: rotateZ(45deg);
+    z-index: 99;
+}
+
+.top-nav {
+    position: absolute;
+    top: 0vh;
+    width: 100%;
+    transform: translateY(-400%);
+    z-index: 1;
+    transition: transform 3s;
+}
+
+.change .top-nav {
+    /* top: 0; */
+    transform: translateY(0%);
+}
+
+.mini-nav-list {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%; 
+}
+
+.mini-nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.mini-nav-link:hover {
+    color: #69100A; 
+    /* text-decoration: underline; */
+}
+
+
+
+/* MAIN SECTION */
+.section-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1.5fr;
+    grid-template-areas: 
+    'photo'
+    'short-bio'
+    'photo2';
+    height: 195vw;
+}
+.main-img {
+    grid-area: photo;
+    width: 50%;
+    justify-self: center;
+    margin-top: 20rem;
+    opacity: .8;
+}
+
+.short-bio {
+    grid-area: short-bio;
+    font-family: 'ZCOOL XiaoWei', serif;
+    background-color: black;
+    color: rgba(255, 255, 255, 0.808);
+    border-top: .5rem solid #69100a85;
+    border-bottom: .5rem solid #69100a85;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 4.2rem;
+    padding: 15rem 22rem;
+    text-indent: 5rem;
+    line-height: 170%;
+    letter-spacing: .2rem;
+}
+
+.short-bio-link {
+    grid-area: short-bio;
+    font-family: 'Mea Culpa', cursive;
+    color: rgba(255, 255, 255, 0.808);
+    background-color: #69100aa9;
+    border: .2rem solid #69100A;
+    text-decoration: none;
+    border-radius: 2rem;
+    padding: 2rem;
+    justify-self: center;
+}
+
+.short-bio-link:hover {
+    background-color: #69100A;
+}
+
+.main-img2 {
+    grid-area: photo2;
+    width: 95%;
+    justify-self: center;
+    margin-right: 3rem;
+    opacity: .4;
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr .5fr;
+    grid-template-areas: 
+    'logo'
+    'icons'
+    'copyright';
+    height: 32vw;
+    background-color: black;
+    border-top: .5rem solid #69100a85;
+}
+
+.foot-logo {
+    grid-area: logo;
+    width: 13%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 8rem;
+}
+
+.icons-group {
+    grid-area: icons; 
+    justify-self: center;
+    margin-top: 2rem;
+    display: inline-flex;
+}
+
+.icon {
+    padding: 1.5rem;
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 4rem;
+    text-decoration: none;
+}
+
+.icon:hover {
+    color: white;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.808);
+    justify-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: raleway;
+    font-weight: 200;
+    display: block;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.copyright a:hover {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1600px) {
+    /* .navbar-links a, li {
+        color: purple;
+    } */
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 3.5rem;
+    }
+    /* MAIN SECTION */
+    .main-img {
+        margin-top: 18rem;
+    }
+    .short-bio {
+        font-size: 3.8rem;
+        padding: 12rem 20rem;
+    }
+    .short-bio-link {
+        padding: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 1415px) {
+    /* .navbar-links a, li {
+        color: blue;
+    } */
+    /* HEADER NAVBAR */
+    .logo {
+        width: 33%;
+    }
+    .navbar-links a, li {
+        font-size: 3.2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 210vw;
+    }
+    .main-img {
+        margin-top: 14rem;
+        width: 55%;
+    }
+    .short-bio {
+        font-size: 3.6rem;
+        padding: 12rem 18rem;
+    }
+    .short-bio-link {
+        padding: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 1315px) {
+    /* .navbar-links a, li {
+        color: yellow;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 70%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 31%;
+    }
+     .navbar-links a, li {
+        font-size: 2.9rem;
+    }
+    /* MAIN SECTION */
+    .main-img {
+       margin-top: 11rem;
+    }
+    .short-bio {
+        font-size: 3.4rem;
+        padding: 11rem 16rem;
+    }
+    .short-bio-link {
+        padding: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1210px) {
+    /* .navbar-links a, li {
+        color: white;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 75%;
+    }
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 2.5rem;
+    }
+    /* MAIN SECTION */
+    .main-img {
+        margin-top: 10rem;
+     }
+    .short-bio {
+        font-size: 3.2rem;
+        padding: 11rem 14rem;
+    }
+    .short-bio-link {
+        padding: 1.5rem;
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    /* .navbar-links a, li {
+        color: grey;
+    } */
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 2.2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 212vw;
+    }
+    .short-bio {
+        font-size: 3rem;
+        padding: 11rem 12rem;
+    }
+    .main-img2 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* .navbar-links a, li {
+        color: hotpink;
+    } */
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 218vw;
+    }
+    .main-img {
+        width: 60%;
+    }
+    .short-bio {
+        font-size: 2.7rem;
+        padding: 10rem 11rem;
+    }
+    .short-bio-link {
+        padding: 1.4rem;
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    /* .navbar-links a, li {
+        color: red;
+    } */
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 1.8rem;
+    }
+    /* MAIN SECTION */
+    .main-img {
+        width: 60%;
+        margin-top: 8rem;
+    }
+    .short-bio {
+        font-size: 2.6rem;
+        padding: 10rem 10rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    /* .navbar-links a, li {
+        color: green;
+    } */
+    /* HEADER NAVBAR */
+    .navbar-links a, li {
+        font-size: 1.6rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 220vw;
+    }
+    .short-bio {
+        font-size: 2.4rem;
+        padding: 9rem 8rem;
+    }
+    .main-img2 {
+        width: 105%;
+    }
+}
+
+
+
+/* SWITCH TO HAMBURGER MENU */
+@media screen and (max-width: 910px) {
+    /* .mini-nav-link {
+        color: aqua;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 80%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 35%;
+    }
+    .navbar {
+        visibility: hidden;
+    }
+    /* HAMBURGER MENU */
+    .mini-nav {
+        visibility: visible;
+        height: auto;
+    }
+    .hamburger-menu {
+        width: 35px;
+        height: 30px;
+        margin-left: 93%;
+        transform: translateY(-25rem);
+    }
+    .mini-nav-list {
+        width: 101%;
+        height: 28vw;
+        padding: 3rem 0;
+    }
+    .mini-nav-link {
+        line-height: 4.5rem;
+        font-size: 2.5rem;
+    }
+    .mini-nav-link:hover {
+        letter-spacing: .5rem;
+        font-size: 3rem;
+    }
+     /* MAIN SECTION */
+    .section-main {
+        height: 224vw;
+    }
+    .main-img {
+        width: 65%;
+        margin-top: 4rem;
+    }
+    .main-img2 {
+        width: 110%;
+        margin-left: 10%;
+    }
+    /* FOOTER */
+    .copyright {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    /* .mini-nav-link {
+        color: yellow;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-22rem);
+    }
+    .mini-nav-list {
+        height: 31vw;
+        padding: 2.5rem 0;
+    }
+    .mini-nav-link {
+        line-height: 4.3rem;
+        font-size: 2.3rem;
+    }
+    .mini-nav-link:hover {
+        letter-spacing: .4rem;
+        font-size: 2.7rem;
+    }
+     /* MAIN SECTION */
+    .section-main {
+        height: 231vw;
+    }
+    /* FOOTER */
+    .footer {
+        height: 36vw;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    /* .mini-nav-link {
+        color: purple;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 85%;
+    }
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        margin-left: 92.5%;
+        transform: translateY(-20rem);
+    }
+    .mini-nav-list {
+        height: 33vw;
+        padding: 2.2rem 0;
+    }
+     /* MAIN SECTION */
+    .section-main {
+        height: 255vw;
+    }
+    /* FOOTER */
+    .footer {
+        height: 40vw;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    /* .mini-nav-link {
+        color: darkred;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-19rem);
+    }
+    .mini-nav-list {
+        height: 35vw;
+        padding: 2rem 0;
+    }
+    .mini-nav-link {
+        line-height: 4rem;
+        font-size: 2rem;
+    }
+    .mini-nav-link:hover {
+        letter-spacing: .3rem;
+        font-size: 2.5rem;
+    }
+     /* MAIN SECTION */
+    .short-bio {
+        font-size: 2.2rem;
+        padding: 8rem 6rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    /* .mini-nav-link {
+        color: darkgreen;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-17rem);
+        margin-left: 92%;
+        width: 33.5px;
+        height: 29px;
+    }
+    .mini-nav-list {
+        height: 37vw;
+        padding: 1.8rem 0;
+        width: 102%;
+    }
+    .mini-nav-link {
+        line-height: 3.8rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 260vw;
+    }
+    .main-img {
+        width: 70%;
+    }
+    .main-img2 {
+        width: 115%;
+    }
+}
+
+@media screen and (max-width: 595px) {
+    /* .mini-nav-link {
+        color: salmon;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 90%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 40%;
+    }
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        width: 30px;
+        height: 27px;
+        transform: translateY(-15.7rem);
+    }
+    .mini-nav-list {
+        height: 37vw;
+        padding: 1.8rem 0;
+    }
+    .mini-nav-link {
+        line-height: 3.5rem;
+        font-size: 1.9rem;
+    }
+    .mini-nav-link:hover {
+        letter-spacing: .2rem;
+        font-size: 2.2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 268vw;
+    }
+    .main-img {
+        margin-top: 6rem;
+    }
+    .short-bio {
+        font-size: 2rem;
+        padding: 6rem 4rem;
+        text-indent: 2rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 55vw;
+    }
+    .foot-logo {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    /* .mini-nav-link {
+        color: goldenrod;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-14rem);
+        margin-left: 91.5%;
+    }
+    .mini-nav-link {
+        font-size: 1.7rem;  
+    }
+    .line {
+        height: .45rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 275vw;
+    }
+    /* FOOTER */
+    .icon {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 505px) {
+    /* .mini-nav-link {
+        color:rosybrown;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-13rem);
+    }
+    .mini-nav-list {
+        padding: 1.7rem 0;
+    }
+    .mini-nav-link {
+        line-height: 3.2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 295vw;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    /* .mini-nav-link {
+        color: lightseagreen;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 95%;
+    }
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-11rem);
+        margin-left: 91%;
+    }
+    .mini-nav-link {
+        font-size: 1.6rem;  
+        line-height: 2.9rem;
+    }
+     /* MAIN SECTION */
+     .section-main {
+         height: 325vw;
+     }
+    .short-bio {
+        font-size: 1.8rem;
+        padding: 6rem 2rem;
+        text-indent: 1.5rem;
+    }
+    .main-img2 {
+        width: 130%;
+        margin-left: 10%;
+    }
+     /* FOOTER */
+     .footer {
+        height: 65vw;
+    }
+     .icon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* .mini-nav-link {
+        color: purple;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 100%; 
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 45%;
+    }
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-10rem);
+        margin-left: 90%;
+    }
+    .mini-nav-list {
+        padding: 1.2rem 0;
+        height: 45vw;
+    }
+    .mini-nav-link {
+        font-size: 1.5rem;  
+        line-height: 2.7rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 360vw;
+    }
+    .main-img2 {
+        width: 140%;
+        margin-left: 15%;
+    }
+    /* FOOTER */
+    .footer {
+        height: 80vw;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    /* .mini-nav-link {
+        color: royalblue;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-8.6rem);
+        margin-left: 89%;
+    }
+    .mini-nav-list {
+        padding: .8rem 0;
+        height: 50vw;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 370vw;
+    }
+    .main-img {
+        width: 80%;
+    }
+    .short-bio {
+        font-size: 1.6rem;
+    }
+    .main-img2 {
+        width: 155%;
+        margin-left: 25%;
+    }
+    /* FOOTER */
+    .foot-logo {
+        width: 25%;
+    }
+    .copyright {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 305px) {
+    /* .mini-nav-link {
+        color: greenyellow;
+    } */
+    /* COMMON STYLES */
+    body {
+        background-size: 105%;
+    }
+    /* HEADER NAVBAR */
+    .logo {
+        width: 55%;
+    }
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-7.5rem);
+        margin-left: 88%;
+        width: 25px;
+        height: 20px;
+    }
+    .line {
+        height: .3rem;
+    }
+    .line-2 {
+        height: .2rem;
+    }
+    .mini-nav-list {
+        padding: .6rem 0;
+        height: 55vw;
+    }
+    .mini-nav-link {
+        line-height: 2.5rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 380vw;
+    }
+    .short-bio {
+        font-size: 1.5rem;
+        padding: 3rem 1rem;
+        text-indent: 1rem;
+    }
+    /* FOOTER */
+    .footer {
+        height: 85vw;
+        margin-top: 9rem;
+    }
+}
+
+@media screen and (max-width: 252px) {
+    /* .mini-nav-link {
+        color: navy;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-6rem);
+        margin-left: 87%;
+        width: 24px;
+        height: 19px;
+    }
+    .mini-nav-list {
+        height: 60vw;
+    }
+    .mini-nav-link {
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 420vw;
+    }
+    .short-bio {
+        font-size: 1.4rem;
+        padding: 3rem .5rem;
+    }
+    .main-img2 {
+        width: 165%;
+        margin-left: 28%;
+    }
+    /* FOOTER */
+    .footer {
+        height: 97vw;
+    }
+    .copyright {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 209px) {
+    /* .mini-nav-link {
+        color: red;
+    } */
+    /* HAMBURGER MENU */
+    .hamburger-menu {
+        transform: translateY(-5rem);
+        margin-left: 86%;
+    }
+    .mini-nav-link {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    /* MAIN SECTION */
+    .section-main {
+        height: 510vw;
+    }
+    .main-img {
+        width: 100%;
+    }
+    .short-bio {
+        padding: 2rem 1rem;
+    }
+    .main-img2 {
+        width: 200%;
+        margin-left: 35%; 
+    }
+    /* FOOTER */
+    .footer {
+        height: 135vw;
+        margin-top: 4rem;
+    }
+    .foot-logo {
+        width: 35%;
+   }
+   .copyright {
+        font-size: .8rem;
+    } 
+}
+
+@media screen and (max-width: 184px) {
+    /* .mini-nav-link {
+        color: white;
+    } */
+    /* MAIN SECTION */
+    .section-main {
+        height: 610vw;
+    }
+}
+

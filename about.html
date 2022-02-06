@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Fowler | About</title>
+
+    <link rel="stylesheet" href="about.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=New+Rocker&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<!-- HEADER LOGO -->
+    <div id="aboutID" class="nav">
+        <img class="logo" src="img/Logo-silver-RED.png">
+        <a class="invisible-link" href="index.html">D</a>
+    </div>
+
+    <h1 class="heading">About</h1>
+
+<!-- MAIN SECTION -->
+<!-- TEXT -->
+<div class="bio-container">
+    <h5 class="sub-heading">Thank you for visiting my website I am grateful that you stopped by!</h5>
+    <p class="text">It has been my lifelong passion to be a great musician. I grew up in the small village of Swannanoa, North Carolina. I have 3 siblings, 2 sisters Peggy and Marsha and 1 brother Jonathan. 
+    I have been in Nashville TN making a living in the music industry for over 37 years and have had a very blessed career. I am involved in many aspects of the business and enjoy sharing knowledge from my many years of grinding it out in Music City. 
+    I currently serve as the touring bassist for The Artimus Pyle Band (Lynyrd Skynyrd). 
+    Please reach out with any questions .. things I am able to help with include but are not limited to tour managing, reading Nashville number charts, producing your song demos and making custom records and much, much more.</p>
+    <br>
+    <p class="sign-off">Dave</p>
+</div>
+
+<!-- VIDEO CONTAINER -->
+<div class="video-container">
+<iframe class="video" src="https://www.youtube.com/embed/2ijdmFFI1p0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe class="video" src="https://www.youtube.com/embed/5nwH_wFp5gY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe class="video" src="https://www.youtube.com/embed/9nuvbhpTyCI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe class="video video-last" src="https://www.youtube.com/embed/WtIYMA3WNKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<!-- FOOTER -->
+<section class="footer">
+    <img src="img/silver-logo.png" class="foot-logo">
+    <div class="icons-group">
+        <a class="icon" href="https://www.facebook.com/davefowlerbass">
+            <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="icon" href="https://www.instagram.com/davefowler1963/" >
+            <i class="fab fa-instagram-square"></i>
+                </a>
+                <a class="icon" href="https://twitter.com/davefonbass">
+            <i class="fab fa-twitter-square"></i>
+                </a>
+                <a  class="icon" href="https://www.youtube.com/watch?v=WP4huJx314w">
+            <i class="fab fa-youtube-square"></i>
+                </a>
+            </div>
+    <p class="copyright">Created by <a href="#">VanessaH Web Design</a>
+        <br>Copyright &#169DaveFowler All Rights Reserved</p>    
+</section>
+
+<!-- SCROLL UP BTN -->
+<a href="about.html#aboutID" class="scroll-up-btn hide" id="chevron-btn">
+    <i class="fas fa-long-arrow-alt-up"></i>
+</a>
+
+<!-- JAVASCRIPT -->
+<script>
+    // SCROLL UP BTN LATE APPEAR ON PHOTO-DEETS PAGE
+    
+    lateScroll = document.getElementById("chevron-btn");
+    
+    var myScrollFunction = function() {
+      var y = window.scrollY;
+      if (y > 1200) {
+        lateScroll.className = "scroll-up-btn show"
+      } else {
+        lateScroll.className = "scroll-up-btn hide"
+      }
+    };
+    
+    window.addEventListener("scroll", myScrollFunction);
+    </script>
+    
+</body>
+</html>
