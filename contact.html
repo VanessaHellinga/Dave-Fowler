@@ -26,15 +26,18 @@
 
 <!-- MAIN SECTION -->
 <section class="main-section">
-    <div class="form-container" id="contact">
+    <div class="form-container" >
         <img src="img/ContactPageIMG.JPG" class='form-img'>
-        <form class="contact-form" action="https://formspree.io/f/xayvelvq" method="POST">
+        <form class="contact-form" action="https://formspree.io/f/xayvelvq" method="POST" id="my-form">
             <input type="text" name="name" placeholder="Your Name">
             <input type="email" name="email" placeholder="Your Email">
             <textarea name="message" placeholder="Your Message"></textarea>
             <input type="submit" value="send">
+            <div id="status"></div>
         </form>
+       
     </div>
+    
 </section>
 
 <!-- FOOTER -->
