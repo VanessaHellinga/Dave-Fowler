@@ -17,11 +17,65 @@
 <body>
 
 <!-- HEADER LOGO -->
-    <div class="nav">
+     <!-- HEADER LOGO NAV BAR -->
+     <div class="nav" id="header">
+
         <img class="logo" src="img/Logo-silver-RED.png">
-        <a class="invisible-link" href="index.html">D</a>
+        <a href="index.html" class="invisible-link">D</a>
+    
+    <!-- NAVBAR -->
+    <ul class="navbar">
+            <a class="a" href="news.html"><li class="navbar-links" id="change-links" data-text="News">News</li></a>
+            <a class="a" href="about.html"><li class="navbar-links" id="change-links" data-text="About">About</li></a>
+            <a class="a" href="photos.html"><li class="navbar-links" id="change-links" data-text="Photos">Photos</li></a>
+            <a class="a" href="production.html"><li class="navbar-links" id="change-links" data-text="Production">Production</li></a>
+            <a class="a" href="friendsAndGear.html"><li class="navbar-links" id="change-links" data-text="Friends & Gear">Friends & Gear</li></a>
+            <a class="a" href="contact.html"><li class="navbar-links" id="change-links" data-text="Contact">Contact</li></a>
+        </ul>
     </div>
 
+
+    <!-- HAMBURGER MENU -->
+    <div class="mini-nav-container">
+        <div class="hamburger-menu-container">
+            <div class='hamburger-menu'>
+                    <div class='line line-1'></div>
+                    <div class='line line-2'></div>
+                    <div class='line line-3'></div>
+            </div>
+        </div>
+
+        <div class="mini-nav">
+            <!-- HEADER LOGO NAV BAR -->
+            <img class="mini-logo" src="img/Logo-silver-RED.png">
+            <a href="index.html" class="invisible-link">D</a>
+        </div>
+        
+        <nav class='top-nav' >
+            <ul class='mini-nav-list'>
+                <li>
+                    <a href='news.html' class='mini-nav-link'>News</a>
+                </li>
+                <li>
+                    <a href='about.html' class='mini-nav-link'>About</a>
+                </li>
+                <li>
+                    <a href='photos.html' class='mini-nav-link'>Photos</a>
+                </li>
+                <li>
+                    <a href='production.html' class='mini-nav-link'>Production</a>
+                </li>
+                <li>
+                    <a href='friendsAndGear.html' class='mini-nav-link'>Friends & Gear</a>
+                </li>
+                <li>
+                    <a href='contact.html' class='mini-nav-link'>Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+   
+ <!-- HEADING -->
     <h1 class="heading">News</h1>
 
 <!-- MAIN SECTION -->
@@ -63,5 +117,7 @@
         <br>Copyright &#169DaveFowler All Rights Reserved</p>    
 </section>
     
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -17,12 +17,67 @@
 <body>
 
 <!-- HEADER LOGO -->
-    <div class="nav">
+     <!-- HEADER LOGO NAV BAR -->
+     <div class="nav" id="header">
+
         <img class="logo" src="img/Logo-silver-RED.png">
-        <a class="invisible-link" href="index.html">D</a>
+        <a href="index.html" class="invisible-link">D</a>
+    
+    <!-- NAVBAR -->
+    <ul class="navbar">
+            <a class="a" href="news.html"><li class="navbar-links" id="change-links" data-text="News">News</li></a>
+            <a class="a" href="about.html"><li class="navbar-links" id="change-links" data-text="About">About</li></a>
+            <a class="a" href="photos.html"><li class="navbar-links" id="change-links" data-text="Photos">Photos</li></a>
+            <a class="a" href="production.html"><li class="navbar-links" id="change-links" data-text="Production">Production</li></a>
+            <a class="a" href="friendsAndGear.html"><li class="navbar-links" id="change-links" data-text="Friends & Gear">Friends & Gear</li></a>
+            <a class="a" href="contact.html"><li class="navbar-links" id="change-links" data-text="Contact">Contact</li></a>
+        </ul>
     </div>
 
-    <h1 class="heading">Contact</h1>
+
+    <!-- HAMBURGER MENU -->
+    <div class="mini-nav-container">
+        <div class="hamburger-menu-container">
+            <div class='hamburger-menu'>
+                    <div class='line line-1'></div>
+                    <div class='line line-2'></div>
+                    <div class='line line-3'></div>
+            </div>
+        </div>
+
+        <div class="mini-nav">
+            <!-- HEADER LOGO NAV BAR -->
+            <img class="mini-logo" src="img/Logo-silver-RED.png">
+            <a href="index.html" class="invisible-link">D</a>
+        </div>
+        
+        <nav class='top-nav' >
+            <ul class='mini-nav-list'>
+                <li>
+                    <a href='news.html' class='mini-nav-link'>News</a>
+                </li>
+                <li>
+                    <a href='about.html' class='mini-nav-link'>About</a>
+                </li>
+                <li>
+                    <a href='photos.html' class='mini-nav-link'>Photos</a>
+                </li>
+                <li>
+                    <a href='production.html' class='mini-nav-link'>Production</a>
+                </li>
+                <li>
+                    <a href='friendsAndGear.html' class='mini-nav-link'>Friends & Gear</a>
+                </li>
+                <li>
+                    <a href='contact.html' class='mini-nav-link'>Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+   
+<!-- HEADING -->
+<h1 class="heading">Contact</h1>
+
 
 <!-- MAIN SECTION -->
 <section class="main-section">
@@ -62,54 +117,6 @@
 </section>
     
 
-<script>
-    //FORM SUBMIT 
-
-window.addEventListener("DOMContentLoaded", function () {
-    // get the form elements defined in your form HTML above
-  
-    var form = document.getElementById("my-form");
-    // var button = document.getElementById("my-form-button");
-    var status = document.getElementById("status");
-  
-    // Success and Error functions for after the form is submitted
-  
-    function success() {
-      form.reset();
-      status.classList.add("success");
-      status.innerHTML = "Thanks!";
-    }
-  
-    function error() {
-      status.classList.add("error");
-      status.innerHTML = "Oops! There was a problem.";
-    }
-  
-    // handle the form submission event
-  
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-  });
-  
-  // helper function for sending an AJAX request
-  
-  function ajax(method, url, data, success, error) {
-    var xhr = new XMLHttpRequest();
-    xhr.open(method, url);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
-      } else {
-        error(xhr.status, xhr.response, xhr.responseType);
-      }
-    };
-    xhr.send(data);
-  }  
-</script>
+<script src="script.js"></script>
 </body>
 </html>
